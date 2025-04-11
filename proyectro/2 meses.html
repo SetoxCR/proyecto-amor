@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 meses juntos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e0f7fa;
+      text-align: center;
+      color: #333;
+    }
+
+    h1 {
+      margin-top: 30px;
+      font-size: 2.5rem;
+      color: #007baf;
+    }
+
+    .heart {
+      font-size: 4rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      color: #ff4081;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    #carta {
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffffcc;
+      border-radius: 15px;
+      display: none;
+      animation: fadeIn 1s ease forwards;
+      font-size: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .imagenes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px auto;
+      max-width: 900px;
+    }
+
+    .imagenes img {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    iframe {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>2 meses juntos</h1>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="para mi novia.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <!-- Imágenes -->
+  <div class="imagenes">
+    <img src="amor 1.jpg" alt="Foto con amor">
+    <img src="foto2.jpg" alt="Foto 2">
+  </div>
+
+  <div class="heart" onclick="mostrarCarta()">❤️</div>
+
+  <div id="carta">
+    <p><strong>Feliz 2 meses juntos mi amor</strong> 💖</p>
+    <p>Te amo mucho, gracias por darme este tiempo a tu lado. Has sido muy especial para mí. Pasamos por dificultades, pero quiero que ante esas cosas que pasen, quiero seguir a tu lado. No soy perfecto, pero siempre te demostraré de miles de maneras cuánto te amo, mi amor.</p>
+    <p>Esta es una pequeña muestra de mi amor por ti. Eres una mujer maravillosa, trabajadora, capaz de lograr cualquier cosa. Habrá gente que te lastimará con muchas cosas, pero recuerda que aquí estoy yo, para acompañarte, sacarte una sonrisa y hacerte sentir especial. 💕</p>
+  </div>
+
+  <!-- (Opcional) YouTube de fondo -->
+  <iframe src="https://www.youtube.com/embed/pB-5XG-DbAA?autoplay=1&mute=1&loop=1&playlist=pB-5XG-DbAA" allow="autoplay" allowfullscreen></iframe>
+
+  <script>
+    function mostrarCarta() {
+      document.getElementById('carta').style.display = 'block';
+      document.getElementById('musica').play();
+    }
+  </script>
+</body>
+</html>
